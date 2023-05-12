@@ -4,7 +4,10 @@ function contar(n){
   }
 }
 
-console.time("duracion contar");
+let timeInit = performance.now();
 contar (5);
-console.timeEnd("duracion contar")
+let timeEnd = performance.now();
 
+let timeUsed = timeEnd - timeInit;
+
+console.log(`tiempo usado por contar ${timeUsed} ms`)
